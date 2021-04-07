@@ -1,10 +1,13 @@
 import Routes from './routes'
 
-import './assets/styles/global.css'
+import GlobalStyles from './assets/GlobalStyles';
 
 function App() {
   return (
-    <Routes />
+    <>
+      <Routes />
+      <GlobalStyles />
+    </>
   )
 }
 
