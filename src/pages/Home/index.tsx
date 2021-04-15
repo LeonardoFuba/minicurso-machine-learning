@@ -5,6 +5,8 @@ import { Container } from './styles';
 
 const Home = () => {
   const [selectedFile,setSelectedFile] = useState<File>();
+  const [haveResult,setHaveResult] = useState(false);
+
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
@@ -13,11 +15,12 @@ const Home = () => {
 
     if(selectedFile) {
       data.append('image', selectedFile);
+
+      setHaveResult(true);
     }
 
 
   }
-
 
   return (
     <Container>
@@ -47,15 +50,17 @@ const Home = () => {
               <header>
                 <h1>Plots</h1>
               </header>
-              <div className="page-content">
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-                <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div>
-              </div>
+              {haveResult && (
+                <div className="page-content">
+                  <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/03.jpg" alt=""/></div>
+                  <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/01.jpg" alt=""/></div>
+                  <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/02.jpg" alt=""/></div>
+                  <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/06.jpg" alt=""/></div>
+                  <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/05.jpg" alt=""/></div>
+                  <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/04.jpg" alt=""/></div>
+                  {/* <div className="plot"><h2>plot n</h2><img src="https://tests-alira.s3.sa-east-1.amazonaws.com/1617772994843-graph.png" alt=""/></div> */}
+                </div>
+              )}
             </div>
           </main>
         </div>

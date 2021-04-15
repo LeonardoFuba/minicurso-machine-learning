@@ -7,12 +7,12 @@ export const Container = styled.div`
 
   .page-header {
     width: 100vw;
-    background: #A0A0A0;
+    background: #b0b0ef;
     height: 10rem;
   }
 
   .top-bar-container {
-    background: #888888;
+    background: #7777FF;
     height: 2rem;
 
     display: flex;
@@ -47,6 +47,7 @@ export const Container = styled.div`
     margin: 1.6rem;
 
     border: none;
+    border-radius: 0.8rem;
     background: var(--color-primary);
 
     transition: background-color 0.2s;
@@ -56,21 +57,31 @@ export const Container = styled.div`
     background: var(--color-primary-dark);
   }
 
+
+
   #page-graphs-tools .result {
     margin: 2rem
+  }
+
+  #page-graphs-tools .result h1 {
+    margin: 1rem;
+  }
+
+  #page-graphs-tools .plot h2 {
+    margin: 1rem;
   }
 
   #page-graphs-tools .page-content {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8rem;
   }
 
   footer {
     width: 100%;
-    background: #A0A0A0;
+    background: #b0b0ef;
     height: 10rem;
     padding-top: 2rem;
   }
