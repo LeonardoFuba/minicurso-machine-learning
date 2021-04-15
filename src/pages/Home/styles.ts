@@ -58,9 +58,8 @@ export const Container = styled.div`
   }
 
 
-
   #page-graphs-tools .result {
-    margin: 2rem
+    margin: 2rem;
   }
 
   #page-graphs-tools .result h1 {
@@ -97,6 +96,14 @@ export const Container = styled.div`
     #page-graphs-tools .page-content {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(8, 1fr);
+    }
+
+    #page-graphs-tools .result {
+      margin: 0;
+    }
+
+    #page-graphs-tools .page-content {
+      gap: 1rem;
     }
   }
 `;
